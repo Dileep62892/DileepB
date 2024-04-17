@@ -1,0 +1,8 @@
+# Ignore .vscode folder
+.vscode/
+
+# Ignore packages folder
+packages/
+
+# Ignore fonts folder
+fonts/
