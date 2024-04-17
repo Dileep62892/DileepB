@@ -1,8 +1,8 @@
 /* ==================== GOOGLE FONTS ====================*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 @font-face {
-  font-family: 'Mattedly Font';
-  src: url("/Fonts/mattedly-font/MattedlyRegular-qZE4d.ttf");
+  font-family: 'Roboto_Flex';
+  src: url("/Fonts/Comfortaa,Roboto_Flex/Roboto_Flex/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf");
 }
 
 /*==================== VARIABLES CSS ====================*/
@@ -201,8 +201,8 @@ img {
 .nav__toggle {
   color: var(--title-color);
   font-weight: var(--font-medium);
-  font-family: 'Mattedly Font';
-  font-size: larger;
+  font-family: 'Roboto_Flex';
+  font-size: smaller;
 }
 
 .nav__logo:hover {
