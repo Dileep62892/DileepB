@@ -233,10 +233,8 @@ img {
 }
 
 .nav__list {
-  display: grid;
-  grid-template-columns: repeat(7, auto); /* Adjust the number of columns based on your menu items */
+  grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns based on your menu items */
   gap: 2rem;
-  overflow: hidden; /* Ensure the overflow is hidden */
 }
 
 .nav__item {
