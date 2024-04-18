@@ -266,7 +266,6 @@ img {
   }
 }
 
-
 .nav__link {
   display: flex;
   flex-direction: column;
@@ -513,7 +512,6 @@ img {
   color: var(--first-color-alt);
 }
 
-
 /*==================== ABOUT ====================*/
 .about__img {
   width: 200px;
@@ -584,7 +582,6 @@ img {
 
 
 /*==================== PROFICIENCY ====================*/
-
 .proficiency__container {
   row-gap: 0;
 }
