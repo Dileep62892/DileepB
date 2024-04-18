@@ -186,6 +186,17 @@ img {
   left: 0;
   z-index: var(--z-fixed);
   background-color: var(--body-color);
+  animation: slideIn 1s ease forwards;
+  transition: background-color 0.5s ease;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /*==================== NAV ====================*/
@@ -233,9 +244,29 @@ img {
 }
 
 .nav__list {
-  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: repeat(7, auto); /* Adjust the number of columns based on your menu items */
   gap: 2rem;
+  overflow: hidden; /* Ensure the overflow is hidden */
 }
+
+.nav__item {
+  opacity: 0; /* Initially hide the items */
+  animation: slideFromLeft 1s ease forwards; /* Apply animation */
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%); /* Start from left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Move to original position */
+  }
+}
+
+
 .nav__link {
   display: flex;
   flex-direction: column;
@@ -285,6 +316,17 @@ img {
 
 .home__container {
   gap: 1rem;
+  opacity: 0;
+  animation: fadeInHome 1s ease forwards;
+}
+
+@keyframes fadeInHome {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .home__content {
@@ -302,10 +344,39 @@ img {
 .home__social-icon {
   font-size: 1.25rem;
   color: var(--first-color);
+  transition: transform 0.3s ease;
+  opacity: 0;
+  animation: slideInSocial 1s ease forwards;
 }
 
 .home__social-icon:hover {
   color: var(--first-color-alt);
+  transform: translateY(-3px);
+}
+
+@keyframes slideInSocial {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Delay animation for each home__social-icon */
+.home__social-icon:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.home__social-icon:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.home__social-icon:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.home__social-icon:nth-child(4) {
+  animation-delay: 0.8s;
 }
 
 
@@ -372,6 +443,23 @@ img {
   font-size: 1.25rem;
 }
 
+.home__img {
+  opacity: 0;
+  animation: slideInImage 1s ease forwards;
+}
+
+@keyframes slideInImage {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
 /*==================== BUTTONS ====================*/
 
 .button {
@@ -381,10 +469,12 @@ img {
   padding: 1rem;
   border-radius: 0.5rem;
   font-weight: var(--font-medium);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .button:hover {
   background-color: var(--first-color-alt);
+  transform: translateY(-3px);
 }
 
 .button__icon {
@@ -422,6 +512,7 @@ img {
   background-color: transparent;
   color: var(--first-color-alt);
 }
+
 
 /*==================== ABOUT ====================*/
 .about__img {
