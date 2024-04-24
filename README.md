@@ -7,7 +7,6 @@ Website contains:
 - Proficiency
 - Skills
 - Qualification
-- Services
 - Portfolio
 - Contact
 - Footer 
